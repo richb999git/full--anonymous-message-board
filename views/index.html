@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to HyperDev!</title>
+    <meta name="description" content="A cool thing made with HyperDev">
+    <!--<link id="favicon" rel="icon" href="https://hyperdev.com/favicon-app.ico" type="image/x-icon">-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./public/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>
+        <!--ISQA_3 - Anonymous Message Board-->
+        <h1 id="boardTitle"></h1>
+      </h1>
+    </header>
+    <div id="userstories">
+      
+        <h3 id="createBoard">
+          Create a new board:
+        </h3>
+        <form class="newBoard" method="post" action="/api/boards">
+          <input class="newBoard" type="text" placeholder="new board" name="newBoard" required><br>
+          <input class="newBoard" type="submit" value="Submit">
+        </form>
+        <br/>
+      </div>
+
+      
+      <div id="boardDisplay">
+        
+      </div>
+      
+      
+      <!--<img src="https://cdn.gomix.com/8f5547a1-a0d6-48f6-aa38-51753a0105f4%2FScreen%20Shot%202017-01-02%20at%201.04.10%20AM.png">-->
+      
+      <br><br>
+      
+    </div>
+    <!--
+    <hr>
+    <div id="testui">
+      <h2>API Tests:</h2>
+        <h4>New thread (POST /api/threads/:board)</h4>
+        <form action="/api/threads/test" method="post" id="newThread">
+          <input type='text' placeholder='board' id='board1' name='board' required><br>
+          <textarea type='text' placeholder='Thread text...' name='text' required></textarea><br>
+          <input type='text' placeholder='password to delete' name='delete_password' required><br>
+          <input type="submit" value="Submit">
+        </form>
+        <hr>
+        <h4>Report thread (PUT /api/threads/:board)</h4>
+        <form id="reportThread">
+          <input type='text' placeholder='board' id='board2' name='board' required><br>
+          <input type='text' placeholder='id to report' name='thread_id' required><br>
+          <input type="submit" value="Submit">
+        </form>
+        <hr>
+        <h4>Delete thread (DELETE /api/threads/:board)</h4>
+        <form id="deleteThread">
+          <input type='text' placeholder='board' id='board3' name='board' required><br>
+          <input type='text' placeholder='id to delete' name='thread_id' required><br>
+          <input type='text' placeholder='password' name='delete_password' required><br>
+          <input type="submit" value="Submit">
+        </form>
+        <hr>
+        
+        
+        <h4>New reply (POST /api/replies/:board)</h4>
+        <form action="/api/threads/test" method="post" id="newReply">
+          <input type='text' placeholder='board' id='board4' name='board' required><br>
+          <input type='text' placeholder='thread id' name='thread_id' required><br>
+          <textarea type='text' placeholder='Thread text...' name='text' required></textarea><br>
+          <input type='text' placeholder='password to delete' name='delete_password' required><br>
+          <input type="submit" value="Submit">
+        </form>
+        <hr>
+        <h4>Report reply (PUT /api/replies/:board)</h4>
+        <form id="reportReply">
+          <input type='text' placeholder='board' id='board5' name='board' required><br>
+          <input type='text' placeholder='thread id' name='thread_id' required><br>
+          <input type='text' placeholder='id to report' name='reply_id' required><br>
+          <input type="submit" value="Submit">
+        </form>
+        <hr>
+        <h4>Delete reply (DELETE /api/replies/:board)</h4>
+        <form id="deleteReply">
+          <input type='text' placeholder='board' id='board6' name='board' required><br>
+          <input type='text' placeholder='thread id' name='thread_id' required><br>
+          <input type='text' placeholder='id to delete' name='reply_id' required><br>
+          <input type='text' placeholder='password' name='delete_password' required><br>
+          <input type="submit" value="Submit">
+        </form>        
+    </div>
+    <hr>
+    -->
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    
+    <script type="text/javascript" src="../public/index.js"></script>
+    
+  </body>
+</html>
