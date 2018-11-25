@@ -1,0 +1,166 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  padding: 10px;
+  background-color: #FFE0B2;
+  font-family: sans-serif;
+}
+
+.replies {
+  margin-left: 0px;
+}
+
+.reply {
+  border: 1px dotted black;
+  margin: 5px;
+  padding: 5px;
+  background-color: #FFE0B2;
+  border-radius: 5px;
+}
+
+.newReply {
+  margin: 10px 5px 10px 5px;
+}
+
+.thread {
+  border: solid thin black;
+  background-color: #FFCC80;
+  box-shadow: 5px 10px 18px #888888;
+  padding: 5px;
+  margin-bottom: 14px;
+  border-radius: 4px;
+  float: left;
+  width: 320px;
+  margin-right: 10px;
+}
+
+.thread2 {
+  border: solid thin black;
+  background-color: #FFCC80;
+  box-shadow: 5px 10px 18px #888888;
+  padding: 5px;
+  margin-bottom: 14px;
+  border-radius: 4px;
+}
+
+.idDate {
+  font-size: 9px;
+}
+
+#submitNewThreadBoards {
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-top: 0%;
+  margin-bottom: 1%;
+}
+#submitNewThread {
+  margin: 3%;
+  margin-top: 10px;
+}
+
+#boardTitle {
+  color: black;
+  text-align: center;
+}
+
+#threadTitle {
+  margin-top: 4px;
+}
+
+#userstories {
+  margin-left: 5%;
+  margin-top: 1%;
+}
+
+a {
+  color: black;
+}
+
+hr {
+  margin: 20px;
+  background-color: black;
+  color: black;
+  border-color: black;
+}
+
+#testui {
+  margin-left: 5%;
+  color: black;
+}
+
+h2 {
+  text-align: left;
+}
+
+.full {
+  width: 95%;
+  margin: 0 auto 0 auto;
+}
+
+#linkH, #linkT {
+  background-color: #FFE0B2;
+  padding: 3px;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: thin;
+  text-decoration: none;
+}
+
+#linkH:hover, #linkT:hover {
+  background-color: #FFF0B2;
+}
+
+input {
+  background-color: #FFFDE7;
+  padding: 3px;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: thin;
+  border-color: black;
+}
+
+input[type="submit"] {
+  background-color: #FFB74D;
+  padding: 3px;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: thin;
+  font-weight: bold;
+  border-color: black;
+  margin-top: 4px;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: #FF5722;
+  color: #212121;
+}
+
+textarea {
+  background-color: #FFFDE7;
+  border-color: black;
+  border-radius: 4px;
+  font-family: sans-serif;
+  padding: 4px;
+}
+
+.boardButton {
+  background-color: #FFE0B2;
+  padding: 2px 4px 2px 4px;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: thin;
+  text-decoration: none;
+  vertical-align: super;
+  position: relative;
+  top: -10px;
+}
+
+.boardButton:hover {
+  background-color: #FFF;
+}
+
+
