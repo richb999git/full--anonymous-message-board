@@ -32,6 +32,7 @@ module.exports = function (app) {
     .get(function (req, res){
       var board = req.params.board;
       console.log("[threads get]" + board);
+      
     
       try {
             db.collection(board).find().sort({bumped_on: -1}).limit(10).toArray(function(err, data) {
@@ -82,6 +83,8 @@ module.exports = function (app) {
         doc.replies = [];
         doc.reported = false;
         doc.replycount = 0;
+        // add the 3 ### here. board = "###" + board; //////////////////////////////////////////////////////////////
+        
         db.collection(board).insertOne(doc, function (err, data) {
                 if (err) {
                   console.log(err);
@@ -460,7 +463,7 @@ module.exports = function (app) {
     // get an array of boards for homepage
     .get(function (req, res){
       console.log("[boards get]");
-      db.collection("##boards").findOne( { _id: ObjectId("5bf886d8ea587d14fe4f1603") }, function (err, data) {
+      db.collection("__boards").findOne( {}, function (err, data) {
               if (err) {
                 console.log(err);
                 res.json({error: "Error posting thread"});
@@ -476,13 +479,13 @@ module.exports = function (app) {
     .post(function (req, res){
       var boardToAdd = req.body.newBoard;
       console.log("[boards post] " + boardToAdd);  
-      if (boardToAdd === "" || boardToAdd === undefined) {
-        console.log("no board provided");
-        res.send("no board provided");
+      if (boardToAdd === "" || boardToAdd === undefined || boardToAdd === "__boards") {
+        console.log("invalid board provided");
+        res.redirect("/");
       } else {
         
         // get boards and then check if submitted board exists. If not then push it on
-          db.collection("##boards").findOne({ _id: ObjectId("5bf886d8ea587d14fe4f1603") }, function (err, data) {
+          db.collection("__boards").findOne({}, function (err, data) {
               if (err) {
                 console.log(err);
                 res.json({error: "Error posting thread"});
@@ -490,7 +493,7 @@ module.exports = function (app) {
                   console.log(data.boards);
                   var found = data.boards.indexOf(boardToAdd) !== -1;
                   if (!found) {
-                    db.collection("##boards").updateOne({ _id: ObjectId("5bf886d8ea587d14fe4f1603") }, { $push: { boards: boardToAdd } }, function (err, data) {
+                    db.collection("__boards").updateOne({ _id: ObjectId("5bf886d8ea587d14fe4f1603") }, { $push: { boards: boardToAdd } }, function (err, data) {
                         if (err) {
                           console.log(err);
                           res.json({error: "Error posting thread"});

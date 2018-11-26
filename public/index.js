@@ -17,6 +17,7 @@ $(function() {
             // THIS ARRAY SET UP IS FOR CODE READABILITIES AND TESTING!
             // THIS IS NOT WHAT IT WOULD LOOK LIKE TO GO LIVE
             //
+ 
             data.forEach(function(ele) {
               console.log("----------thread get------------",ele);//can I use typeScript please?!
               var thread = ['<div class="thread">'];

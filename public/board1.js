@@ -59,6 +59,7 @@ $(function() {
           });
           e.preventDefault();
         });
+  
         $('#boardDisplay').on('submit','#reportReply', function(e) {
           var url = "/api/replies/"+currentBoard;
           $.ajax({
@@ -69,30 +70,45 @@ $(function() {
           });
           e.preventDefault();
         });
+  
         $('#boardDisplay').on('submit','#deleteThread', function(e) {
           var url = "/api/threads/"+currentBoard;
           $.ajax({
             type: "DELETE",
             url: url,
             data: $(this).serialize(),
-            success: function(data) { alert(data); }
+            success: function(data) { 
+              console.log(data); 
+              if(data === "incorrect password") {
+                alert(data);
+              } else {
+                window.location.reload(true);
+              }
+            }, 
+            error: function(data) { console.log("error deleting thread"); alert(data) }
           });
-          //e.preventDefault(); stops alert but refreshes
+          e.preventDefault();
           
-        });        
+        });    
+  
         $('#boardDisplay').on('submit','#deleteReply', function(e) {
           var url = "/api/replies/"+currentBoard;
           $.ajax({
             type: "DELETE",
             url: url,
             data: $(this).serialize(),
-            success: function(data) { alert(data); }
-            
+            success: function(data) { 
+              console.log(data); 
+              if(data === "incorrect password") {
+                alert(data);
+              } else {
+                window.location.reload(true);
+              }
+            }, 
+            error: function(data) { console.log("error deleting reply"); alert(data) }
           });
-          //e.preventDefault(); stops alert but refreshes
-          
-          
-            
-          
-        });              
+          e.preventDefault();
+           
+        });
+  
       });
