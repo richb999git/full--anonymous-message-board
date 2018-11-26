@@ -1,4 +1,4 @@
-**FreeCodeCamp**- Information Security and Quality Assurance
+**FreeCodeCamp**- Information Security and Quality Assurance - project updated with own front end
 ------
 
 Project Anonymous Message Board - with personal front end
